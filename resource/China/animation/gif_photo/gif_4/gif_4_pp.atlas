@@ -1,0 +1,55 @@
+
+gif_4_pp.png
+size: 520, 189
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+pp
+  rotate: true
+  xy: 217, 2
+  size: 185, 213
+  orig: 186, 213
+  offset: 0, 0
+  index: -1
+pp-body
+  rotate: true
+  xy: 2, 2
+  size: 185, 213
+  orig: 185, 213
+  offset: 0, 0
+  index: -1
+pp-eye1
+  rotate: false
+  xy: 498, 36
+  size: 14, 17
+  orig: 14, 17
+  offset: 0, 0
+  index: -1
+pp-eye2
+  rotate: false
+  xy: 468, 43
+  size: 28, 10
+  orig: 28, 10
+  offset: 0, 0
+  index: -1
+pp-lhand
+  rotate: true
+  xy: 432, 99
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+pp-mouse
+  rotate: false
+  xy: 468, 55
+  size: 32, 42
+  orig: 32, 42
+  offset: 0, 0
+  index: -1
+pp-rhand
+  rotate: false
+  xy: 432, 7
+  size: 34, 90
+  orig: 34, 90
+  offset: 0, 0
+  index: -1

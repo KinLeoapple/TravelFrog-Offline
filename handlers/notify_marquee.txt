@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 214) ----
+prototype.notify_marquee=function(e){var t=new MessageInfo;t.count=3,t.content=e.msg,this.massegeList.push(t),core.PageManage.getInstance().addViewControl(SystemNoticeViewController,core.ViewLayerType.NoticeLayer)}
+

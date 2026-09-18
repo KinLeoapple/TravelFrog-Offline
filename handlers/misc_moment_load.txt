@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 122) ----
+prototype.misc_moment_load=function(e){for(var t=Utils.convertArray(e.list),i=0;i<t.length;i++)this.data.has_map[t[i]]=!0}
+

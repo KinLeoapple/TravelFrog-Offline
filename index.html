@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>旅行青蛙·中国之旅</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" href="data:,">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html,
+        body {
+            -ms-touch-action: none;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 屏幕适配: 竖屏窄于 16:9 (设计分辨率 640x1136) 时切换 fixedWidth, 避免左右裁切 -->
+<div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto"
+     data-scale-mode="fixedHeight" data-frame-rate="60" data-content-width="640" data-content-height="1136"
+     data-show-paint-rect="false"
+     data-multi-fingered="1" data-show-fps="false" data-show-log="false"
+     data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+</div>
+
+<script>
+    (function () {
+        var el = document.querySelector('.egret-player');
+        if (!el) return;
+        var aspect = window.innerWidth / Math.max(1, window.innerHeight);
+        var design = 640 / 1136;
+        if (aspect < design - 0.002) el.setAttribute('data-scale-mode', 'fixedWidth');
+    })();
+
+    window.gameLanguage = "China";
+    window.cdn = '';
+    window.cdnLaunch = '';
+    window.ossLaunch = '';
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            if (callback) callback();
+        }, false);
+        s.addEventListener('error', function () {
+            console.log("loaderror");
+            var label = document.createElement("label")
+            label.style = "color: red; position: absolute; top: 50%; left:50%;height: 100px; margin-top: -50px; margin-left: -150px;"
+            label.innerText = "网络加载失败,请检查网络设置重试."
+            document.body.appendChild(label)
+        }, false);
+        document.body.appendChild(s);
+    };
+    loadSingleScript("launcher.js?=" + Math.random());
+</script>
+
+<!-- ===== 旅行地图 (官方 prism-qingwa-map 1:1 还原: 高德默认样式+官方标记/按钮/字体,
+     素材与参数取证自 官方截图/assets/, 城市表 server/map_cities.js) ===== -->
+<style>
+@font-face {
+  font-family: pageFont;
+  src: url('resource/China/images/Map/mianhuatang.woff') format('woff')
+}
+/* 官方页尺寸单位为 vmin (竖屏 WebView, vmin=宽); 本页 egret fixedHeight 640×1136
+   高度锁定 → 等比折算 1vmin = 640/1136 vh ≈ 0.5634vh, 以下数值均由此换算 */
+#tmLayer .marker_icon { pointer-events: auto; width: 8.04vh; height: 11.42vh; font-size: 0; }
+#tmLayer .marker_icon img { width: 100%; height: 100%; }
+#tmLayer .marker_icon .numbox, #tmLayer .marker_icon .cover { display: none; }
+#tmLayer .marker_icon.maxmap { position: relative; width: 13.97vh; height: 18.18vh; background: url('resource/China/images/Map/map_frame_max.png') center no-repeat; background-size: cover; font-family: pageFont; color: #000; text-align: center; }
+#tmLayer .marker_icon.maxmap .iconimg { display: none; }
+/* 城市名悬浮于木框上方 (官方 .maxmap 文字样式: pageFont 黑字居中) */
+#tmLayer .marker_icon.maxmap .cname { position: absolute; top: -5.41vh; left: 50%; transform: translateX(-50%); width: max-content; max-width: 20vh; font-size: 3vh; line-height: 5.41vh; font-weight: 500; text-shadow: 0 0 .4vh #fff; }
+#tmLayer .marker_icon .cname { display: none; }
+#tmLayer .marker_icon.maxmap .numbox { display: flex; justify-content: center; width: 8.41vh; height: 4.66vh; margin: 0 auto; padding-top: .15vh; background: url('resource/China/images/Map/map_ic_number.png') center no-repeat; background-size: 100% 100%; }
+#tmLayer .numbox .imgbox { width: 1.80vh; height: 2.70vh; margin-top: .15vh; transform: rotate(4deg); }
+#tmLayer .numbox .imgbox img { width: 100%; height: 100%; }
+#tmLayer .marker_icon.maxmap .cover { display: block; width: 11.04vh; height: 7.36vh; margin: -.75vh auto 0; position: relative; z-index: -1; background: url('resource/China/images/Map/map_cover_frame.jpg') center no-repeat; background-size: 100% 100%; }
+#tmLayer .cover img { width: 110%; height: 110%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#tmLayer .marker_icon_none { pointer-events: auto; width: 4.06vh; height: 5.26vh; }
+#tmLayer .marker_icon_none img { width: 100%; height: 100%; }
+#tmLayer .btn_ctrl { position: absolute; z-index: 2; right: 1.50vh; width: 4.81vh; height: 4.81vh; background-position: center; background-repeat: no-repeat; background-size: 4.81vh 4.81vh; cursor: pointer; }
+#tmLayer .btn_inc { bottom: 9.92vh; background-image: url('resource/China/images/Map/map_btn_inc.png'); }
+#tmLayer .btn_dec { bottom: 2.70vh; background-image: url('resource/China/images/Map/map_btn_dec.png'); }
+/* 官方 map-head 横幅 (92.8×17.07vmin 木框底图 + p 文字) */
+#tmBanner { position: absolute; width: 52.28vh; height: 9.62vh; top: 12.02vh; left: 50%; margin-left: -26.14vh; z-index: 2; background: url('resource/China/images/Map/map_head.png') no-repeat; background-size: 100% 100%; }
+#tmBanner p { margin: 0; font-size: 1.95vh; color: #545d4c; letter-spacing: 0; font-weight: 500; padding-top: 1.65vh; margin-left: 4.21vh; line-height: 3.15vh; overflow: hidden; font-family: pageFont; }
+#tmToast { position: absolute; left: 50%; bottom: 18vh; transform: translateX(-50%); z-index: 5; background: rgba(60, 45, 20, .85); color: #fff; font-family: pageFont; font-size: 15px; padding: 8px 20px; border-radius: 18px; opacity: 0; transition: opacity .25s; pointer-events: none; white-space: nowrap; }
+/* 官方城市照片整页 (album-wrap/album-cont 结构) */
+#tmPage { position: absolute; inset: 0; z-index: 5; background-color: #e5dcbf; }
+#tmPage .album-cont { position: absolute; inset: 0; background: url('resource/China/images/Map/album_page_bg.png') center no-repeat; background-size: 100% auto; overflow: hidden; }
+#tmPage .top-btn { position: absolute; width: 100%; height: 7.66vh; top: 3.08vh; z-index: 3; }
+#tmPage .backgame { width: 7.21vh; height: 7.66vh; background: url('resource/China/images/Map/map_btn_back.png') no-repeat; background-size: 100% 100%; position: absolute; left: 2.78vh; cursor: pointer; }
+#tmPage .share-btn { width: 7.21vh; height: 7.66vh; background: url('resource/China/images/Map/album_share_btn.png') no-repeat; background-size: 100% 100%; position: absolute; top: .3vh; right: 1.5vh; cursor: pointer; }
+#tmPage .site-txt { width: 16.97vh; height: 5.11vh; background: url('resource/China/images/Map/album_site_txt.png') no-repeat; background-size: 100% 100%; margin: 12.47vh auto 0; display: flex; justify-content: center; align-items: center; position: relative; font-family: pageFont; font-size: 2.8vh; color: #545d4c; }
+#tmPage .site-txt::before { content: ''; width: 1.69vh; height: 3.84vh; background: url('resource/China/images/Map/album_site_pin.png') no-repeat; background-size: 100% 100%; margin-right: .9vh; }
+#tmPage .tmAPhotos { display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-start; position: absolute; top: 19.5vh; bottom: 30vh; left: 0; right: 0; overflow: hidden; }
+#tmPage .imgbox { width: 21.19vh; height: 14.13vh; margin: 0 1.5vh 2.86vh; border: .45vh solid #ffffff; box-sizing: border-box; background: #fff; cursor: pointer; }
+#tmPage .imgbox img { width: 100%; height: 100%; display: block; }
+#tmPage .arrow { width: 5.63vh; height: 8.86vh; position: absolute; top: 43.27vh; z-index: 2; cursor: pointer; display: none; }
+#tmPage .arrow.left { background: url('resource/China/images/Map/album_arrow_left.png') no-repeat; background-size: 100% 100%; left: .75vh; }
+#tmPage .arrow.right { background: url('resource/China/images/Map/album_arrow_right.png') no-repeat; background-size: 100% 100%; right: .75vh; }
+#tmPage .msg-cont { width: 54.24vh; height: 26.29vh; background: url('resource/China/images/Map/album_msg_cont.png') no-repeat; background-size: 100% 100%; position: absolute; top: 73%; left: 50%; margin-left: -27.12vh; z-index: 2; }
+#tmPage .msg-cont p { margin: 0; font-family: pageFont; color: #545d4c; }
+#tmPage .msg-cont p:first-child { height: 2.26vh; font-size: 2.26vh; letter-spacing: .09vh; text-align: center; line-height: 2.26vh; font-weight: 600; position: absolute; top: 3.38vh; left: 6vh; }
+#tmPage .msg-cont p:last-child { font-size: 1.8vh; position: absolute; bottom: 2vh; width: 100%; text-align: center; }
+</style>
+<div id="tmLayer" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff">
+    <div id="tmMap" style="position:absolute;inset:0"></div>
+    <div id="tmBack" title="返回"
+         style="position:absolute;top:3.08vh;left:2.78vh;z-index:2;width:7.21vh;height:7.66vh;background:url('resource/China/images/Map/map_btn_back.png') center no-repeat;background-size:100% 100%;cursor:pointer"></div>
+    <div id="tmMine" title="我的"
+         style="position:absolute;top:3.08vh;right:2.78vh;z-index:2;width:7.21vh;height:7.66vh;background:url('resource/China/images/Map/map_btn_mine.png') center no-repeat;background-size:100% 100%;cursor:pointer"></div>
+    <div id="tmBanner"></div>
+    <div class="btn_ctrl btn_inc" onclick="window.__tmMap&&__tmMap.zoomIn()"></div>
+    <div class="btn_ctrl btn_dec" onclick="window.__tmMap&&__tmMap.zoomOut()"></div>
+    <div id="tmToast"></div>
+    <div id="tmPage" style="display:none">
+        <div class="album-cont">
+            <div class="top-btn">
+                <div id="tmABack" class="backgame" title="返回地图"></div>
+                <div id="tmAShare" class="share-btn" title="分享"></div>
+            </div>
+            <div id="tmASite" class="site-txt"></div>
+            <div id="tmAPhotos" class="tmAPhotos"></div>
+            <div id="tmAPrev" class="arrow left" title="上一页"></div>
+            <div id="tmANext" class="arrow right" title="下一页"></div>
+            <div class="msg-cont">
+                <p>添加留言卡片</p>
+                <p>还剩 10 张</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    (function () {
+        var MAP = 'resource/China/images/Map/', inited = false, lit = [];
+
+        function openTM() {
+            document.getElementById('tmLayer').style.display = 'block';
+            document.getElementById('tmPage').style.display = 'none';
+            if (inited) return;
+            inited = true;
+            var s = document.createElement('script');
+            // Key 在服务端 (server/amap.key.json), 经本地代理下发, 客户端源码不含 Key
+            s.src = '/amap/maps.js';
+            s.onerror = function () { toast('地图加载失败，请检查网络') };
+            s.onload = function () {
+                fetch('/api/map').then(function (r) {
+                    return r.json()
+                }).then(function (d) {
+                    boot(d)
+                })
+            };
+            document.head.appendChild(s);
+        }
+
+        function closeTM() {
+            document.getElementById('tmLayer').style.display = 'none'
+        }
+
+        window.__openTravelMap = openTM;
+        document.getElementById('tmBack').onclick = closeTM;
+        document.getElementById('tmMine').onclick = function () {
+            var b = document.getElementById('tmBanner'), c = b.getAttribute('data-cities') || '';
+            alert('已打卡 ' + (b.getAttribute('data-n') || 0) + ' 个城市\n' + c.split(',').filter(Boolean).join('、'));
+        };
+        document.getElementById('tmABack').onclick = function () {
+            document.getElementById('tmPage').style.display = 'none';
+        };
+        document.getElementById('tmAShare').onclick = function () { toast('离线版暂不支持分享') };
+        document.getElementById('tmAPrev').onclick = function () { tmAScroll(-document.getElementById('tmAPhotos').clientHeight) };
+        document.getElementById('tmANext').onclick = function () { tmAScroll(document.getElementById('tmAPhotos').clientHeight) };
+
+        var toastTimer = 0;
+        function toast(msg) { // 官方 s.a.fail 提示 ("该地区尚未点亮")
+            var t = document.getElementById('tmToast');
+            t.textContent = msg;
+            t.style.opacity = 1;
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function () { t.style.opacity = 0 }, 1600);
+        }
+
+        // 官方缩放联动 (prism-qingwa-map): zoom>=6 时 .marker_icon 加 maxmap 类
+        // (大图钉+数字牌+照片封面), 视口内首次进入 maxmap 懒挂 .cover (城市首张照片)
+        function syncMarkers() {
+            var mx = window.__tmMap.getZoom() >= 6, b = window.__tmMap.getBounds();
+            lit.forEach(function (o) {
+                o.el.classList.toggle('maxmap', mx);
+                if (mx && !o.covered && b.contains(o.m.getPosition())) {
+                    o.covered = true;
+                    var cv = document.createElement('div');
+                    cv.className = 'cover';
+                    cv.innerHTML = '<img src="/api/map/photo/' + o.c.pics[0] + '.png" alt="">';
+                    o.el.appendChild(cv);
+                }
+            });
+        }
+
+        function boot(data) {
+            // 官方初始化参数原样: 无 mapStyle (高德默认标准样式), zooms 限 [4,8]
+            window.__tmMap = new AMap.Map('tmMap', {
+                resizeEnable: true, zoom: 4, zooms: [4, 8],
+                center: [111.380283, 32.743444]
+            });
+            var cities = data.cities || [], litc = cities.filter(function (c) { return c.status });
+            var n = litc.length,
+                T = [[1, '迈出蛙生第一步'], [5, '小小背包客'], [10, '铁道旅行家'], [20, '山河旅人'], [34, '天涯海角走出腹肌'], [50, '走遍大好河山']],
+                next = T.filter(function (t) {
+                    return t[0] > n
+                })[0], b = document.getElementById('tmBanner');
+            b.setAttribute('data-n', n);
+            b.setAttribute('data-cities', litc.map(function (c) { return c.name }).join(','));
+            b.innerHTML = '<p>' + (n ? '蛙蛙已打卡<b style="color:#e07b00">' + n + '</b>个城市啦～' : '蛙蛙还没出过远门，带份便当出发吧～') + '<br>' +
+                (next ? ('再打卡<b style="color:#e07b00">' + (next[0] - n) + '</b>个城市可获得<b style="color:#e07b00">【' + next[1] + '】</b>称号！') : '已<b style="color:#e07b00">走遍大好河山</b>，膜拜蛙神！') + '</p>';
+            // 全部 35 城标记 (官方 DOM 结构): 已点亮 marker_icon+城市名+数字牌 / 未点亮 marker_icon_none
+            cities.forEach(function (c) {
+                var e = document.createElement('div');
+                if (c.status) {
+                    e.className = 'marker_icon';
+                    e.innerHTML = '<div class="cname">' + c.name + '</div>' +
+                        '<img class="iconimg" src="' + MAP + 'map_ic_unlocked2.png">';
+                    var nb = document.createElement('div'), h = '';
+                    nb.className = 'numbox';
+                    String(c.count).split('').forEach(function (d) {
+                        h += "<div class='imgbox'><img src='" + MAP + "digit_" + d + ".png'></div>"
+                    });
+                    nb.innerHTML = h;
+                    e.appendChild(nb);
+                } else {
+                    e.className = 'marker_icon_none';
+                    e.innerHTML = '<img class="iconimg" src="' + MAP + 'map_ic_locked.png">';
+                }
+                var m = new AMap.Marker({
+                    position: new AMap.LngLat(c.lng, c.lat),
+                    anchor: 'bottom-center', title: c.name, content: e
+                });
+                m.on('click', function (ev) {
+                    (ev && ev.stopPropagation) ? ev.stopPropagation() : (window.event && (window.event.cancelBubble = true));
+                    c.status ? pn(c) : toast('该地区尚未点亮');
+                });
+                window.__tmMap.add(m);
+                if (c.status) lit.push({ el: e, c: c, m: m, covered: false });
+            });
+            window.__tmMap.on('zoomchange', syncMarkers);
+            // AMap 1.4.15 编程式 setZoom/setZoomAndCenter 只触发 zoomstart (此时 getZoom 已是目标值)
+            window.__tmMap.on('zoomstart', syncMarkers);
+            window.__tmMap.on('moveend', syncMarkers);
+            syncMarkers();
+        }
+
+        // ---- 墙上地图触摸启用 ----
+        // 修复: 原实现监听舞台 TOUCH_END 并全树扫描 + 包围盒判定, 不检查可见性与命中
+        // 目标 —— 日记返回键与屋内墙图 (fs_8_1, 左上 xw0_8_1_png) 的屏幕矩形重叠,
+        // 从日记退出时会误开。改为把地图热区交回 Egret 命中测试自然分发: 被窗口盖住/
+        // 隐藏的节点不可能成为 touch 目标, 误触消失。
+        // 注意: 墙图区域真正接收点击的是官方隐形按钮 enterTravelMap Rect (与墙图
+        // 重叠且在其上层, 官方 on_enterTravelMap_tap 被活动开关关闭, 离线恒无操作),
+        // 所以主钩子挂在 Rect 上 (视图的 skinPart 属性定位), 图片触摸启用仅兜底。
+        function tmEnableMapTouch() {
+            var st = egret.MainContext.instance.stage;
+            var tap = function (node) {
+                node.__tmTap = 1;
+                node.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+                    openTM();
+                }, node);
+            };
+            var scan = function (node, d) {
+                if (!node || d > 16) return;
+                if (node.source === 'xw0_8_1_png' && !node.__tmTap) {
+                    node.__tmTap = 1;
+                    node.touchEnabled = true;
+                    node.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+                        openTM();
+                    }, node);
+                }
+                // 官方地图入口 Rect (MainIn 视图的 skinPart): 已可触摸, 只补监听
+                if (node.enterTravelMap && !node.enterTravelMap.__tmTap) tap(node.enterTravelMap);
+                if (node instanceof egret.DisplayObjectContainer) {
+                    for (var i = 0; i < node.numChildren; i++) scan(node.getChildAt(i), d + 1);
+                }
+            };
+            scan(st, 0);
+        }
+
+        function tmStageHook() {
+            if (window.__tmStageHooked || typeof egret === 'undefined' || !egret.MainContext) return;
+            window.__tmStageHooked = true;
+            // 官方 Main 的静态舞台尺寸在我们环境恒 0 (其 onShow 初始化未生效),
+            // 相机截取框等 UI 的居中/钳制全靠它 —— 兜底为 fixedHeight 设计尺寸
+            if (window.Main && Main.stageWidth === 0) { Main.stageWidth = 640; Main.stageHeight = 1136; }
+            tmEnableMapTouch();
+            // 场景视图动态创建/销毁 (进屋、开关日记), 周期补扫 (幂等, 扫描开销可忽略)
+            setInterval(tmEnableMapTouch, 1000);
+        }
+
+        var tmPoll = setInterval(function () {
+            if (typeof egret !== 'undefined' && egret.MainContext && egret.MainContext.instance) {
+                tmStageHook();
+                clearInterval(tmPoll);
+            }
+        }, 1000);
+
+        // ---- 城市照片整页 (官方 album-wrap 结构: 木匾标题+白框照片+翻页箭头+留言卡) ----
+        var tmAOffset = 0;
+        function pn(c) {
+            tmAOffset = 0;
+            document.getElementById('tmASite').textContent = c.name;
+            var g = document.getElementById('tmAPhotos');
+            g.innerHTML = '';
+            g.scrollTop = 0;
+            c.pics.forEach(function (id) {
+                var d = document.createElement('div'), im = document.createElement('img');
+                d.className = 'imgbox';
+                im.loading = 'lazy';
+                im.src = '/api/map/photo/' + id + '.png';
+                im.onclick = function () {
+                    window.open('/api/map/photo/' + id + '.png')
+                };
+                d.appendChild(im);
+                g.appendChild(d);
+            });
+            tmAScroll(0);
+            document.getElementById('tmPage').style.display = 'block';
+        }
+        function tmAScroll(delta) { // 照片区按页滚动 (官方左右箭头翻页)
+            var g = document.getElementById('tmAPhotos');
+            tmAOffset = Math.max(0, Math.min(g.scrollHeight - g.clientHeight, tmAOffset + delta));
+            g.scrollTop = tmAOffset;
+            var multi = g.scrollHeight > g.clientHeight + 4;
+            document.getElementById('tmAPrev').style.display = multi && tmAOffset > 0 ? 'block' : 'none';
+            document.getElementById('tmANext').style.display = multi && tmAOffset < g.scrollHeight - g.clientHeight - 4 ? 'block' : 'none';
+        }
+    })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+
+gif_4_dd.png
+size: 332, 269
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+dd-body
+  rotate: false
+  xy: 2, 112
+  size: 140, 155
+  orig: 140, 155
+  offset: 0, 0
+  index: -1
+dd-box
+  rotate: false
+  xy: 144, 113
+  size: 137, 154
+  orig: 151, 154
+  offset: 2, 0
+  index: -1
+dd-bu
+  rotate: false
+  xy: 197, 17
+  size: 49, 94
+  orig: 49, 94
+  offset: 0, 0
+  index: -1
+dd-cao
+  rotate: false
+  xy: 248, 55
+  size: 49, 56
+  orig: 49, 56
+  offset: 0, 0
+  index: -1
+dd-er1
+  rotate: false
+  xy: 299, 46
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+dd-er2
+  rotate: false
+  xy: 299, 69
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1
+dd-eye1
+  rotate: true
+  xy: 215, 2
+  size: 13, 11
+  orig: 13, 11
+  offset: 0, 0
+  index: -1
+dd-eye2
+  rotate: true
+  xy: 197, 2
+  size: 13, 16
+  orig: 13, 16
+  offset: 0, 0
+  index: -1
+dd-guazi
+  rotate: false
+  xy: 283, 176
+  size: 31, 50
+  orig: 31, 50
+  offset: 0, 0
+  index: -1
+dd-head
+  rotate: false
+  xy: 2, 2
+  size: 120, 108
+  orig: 129, 108
+  offset: 0, 0
+  index: -1
+dd-larm
+  rotate: false
+  xy: 283, 228
+  size: 47, 39
+  orig: 47, 39
+  offset: 0, 0
+  index: -1
+dd-lhand
+  rotate: false
+  xy: 248, 16
+  size: 37, 37
+  orig: 58, 38
+  offset: 17, 0
+  index: -1
+dd-rarm
+  rotate: true
+  xy: 301, 118
+  size: 24, 29
+  orig: 24, 29
+  offset: 0, 0
+  index: -1
+dd-rhand
+  rotate: true
+  xy: 299, 96
+  size: 20, 31
+  orig: 20, 31
+  offset: 0, 0
+  index: -1
+dd-shengzi
+  rotate: true
+  xy: 283, 118
+  size: 56, 16
+  orig: 56, 16
+  offset: 0, 0
+  index: -1
+dd-zhuzi
+  rotate: false
+  xy: 124, 10
+  size: 71, 100
+  orig: 71, 100
+  offset: 0, 0
+  index: -1
+dd-zui
+  rotate: false
+  xy: 301, 144
+  size: 29, 30
+  orig: 29, 31
+  offset: 0, 0
+  index: -1

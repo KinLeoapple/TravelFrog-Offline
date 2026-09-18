@@ -1,0 +1,62 @@
+
+gif_5_role_qw.png
+size: 208, 70
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+qw-arm1
+  rotate: true
+  xy: 177, 36
+  size: 32, 23
+  orig: 32, 23
+  offset: 0, 0
+  index: -1
+qw-arm2
+  rotate: false
+  xy: 129, 4
+  size: 24, 25
+  orig: 24, 26
+  offset: 0, 1
+  index: -1
+qw-body
+  rotate: false
+  xy: 2, 2
+  size: 65, 66
+  orig: 83, 66
+  offset: 7, 0
+  index: -1
+qw-eye
+  rotate: true
+  xy: 193, 16
+  size: 18, 13
+  orig: 19, 14
+  offset: 1, 1
+  index: -1
+qw-foot1
+  rotate: true
+  xy: 129, 31
+  size: 37, 22
+  orig: 37, 22
+  offset: 0, 0
+  index: -1
+qw-foot2
+  rotate: true
+  xy: 153, 31
+  size: 37, 22
+  orig: 37, 22
+  offset: 0, 0
+  index: -1
+qw-leg
+  rotate: false
+  xy: 155, 6
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+qw-maozi
+  rotate: false
+  xy: 69, 2
+  size: 58, 66
+  orig: 58, 66
+  offset: 0, 0
+  index: -1

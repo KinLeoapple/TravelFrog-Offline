@@ -1,0 +1,482 @@
+
+gif_6_role_bhqw.png
+size: 2924, 2796
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+spine qb/qb/qb_00000
+  rotate: true
+  xy: 2, 1576
+  size: 310, 398
+  orig: 2000, 1400
+  offset: 41, 235
+  index: -1
+spine qb/qb/qb_00002
+  rotate: true
+  xy: 2514, 1253
+  size: 314, 408
+  orig: 2000, 1400
+  offset: 37, 235
+  index: -1
+spine qb/qb/qb_00004
+  rotate: true
+  xy: 1301, 1882
+  size: 309, 416
+  orig: 2000, 1400
+  offset: 42, 235
+  index: -1
+spine qb/qb/qb_00006
+  rotate: true
+  xy: 410, 2194
+  size: 301, 423
+  orig: 2000, 1400
+  offset: 50, 235
+  index: -1
+spine qb/qb/qb_00007
+  rotate: true
+  xy: 410, 2194
+  size: 301, 423
+  orig: 2000, 1400
+  offset: 50, 235
+  index: -1
+spine qb/qb/qb_00008
+  rotate: true
+  xy: 537, 325
+  size: 311, 552
+  orig: 2000, 1400
+  offset: 47, 116
+  index: -1
+spine qb/qb/qb_00009
+  rotate: true
+  xy: 1091, 322
+  size: 311, 552
+  orig: 2000, 1400
+  offset: 47, 106
+  index: -1
+spine qb/qb/qb_00010
+  rotate: true
+  xy: 570, 7
+  size: 313, 564
+  orig: 2000, 1400
+  offset: 46, 93
+  index: -1
+spine qb/qb/qb_00011
+  rotate: true
+  xy: 570, 7
+  size: 313, 564
+  orig: 2000, 1400
+  offset: 46, 93
+  index: -1
+spine qb/qb/qb_00012
+  rotate: true
+  xy: 2, 11
+  size: 312, 566
+  orig: 2000, 1400
+  offset: 46, 91
+  index: -1
+spine qb/qb/qb_00013
+  rotate: true
+  xy: 2, 11
+  size: 312, 566
+  orig: 2000, 1400
+  offset: 46, 91
+  index: -1
+spine qb/qb/qb_00016
+  rotate: true
+  xy: 2, 11
+  size: 312, 566
+  orig: 2000, 1400
+  offset: 46, 91
+  index: -1
+spine qb/qb/qb_00017
+  rotate: true
+  xy: 2, 11
+  size: 312, 566
+  orig: 2000, 1400
+  offset: 46, 91
+  index: -1
+spine qb/qb/qb_00014
+  rotate: true
+  xy: 1136, 7
+  size: 313, 564
+  orig: 2000, 1400
+  offset: 46, 93
+  index: -1
+spine qb/qb/qb_00015
+  rotate: true
+  xy: 1136, 7
+  size: 313, 564
+  orig: 2000, 1400
+  offset: 46, 93
+  index: -1
+spine qb/qb/qb_00018
+  rotate: true
+  xy: 1136, 7
+  size: 313, 564
+  orig: 2000, 1400
+  offset: 46, 93
+  index: -1
+spine qb/qb/qb_00019
+  rotate: true
+  xy: 1645, 322
+  size: 311, 551
+  orig: 2000, 1400
+  offset: 48, 93
+  index: -1
+spine qb/qb/qb_00020
+  rotate: true
+  xy: 1382, 635
+  size: 310, 553
+  orig: 2000, 1400
+  offset: 48, 91
+  index: -1
+spine qb/qb/qb_00021
+  rotate: true
+  xy: 1424, 1258
+  size: 309, 547
+  orig: 2000, 1400
+  offset: 49, 91
+  index: -1
+spine qb/qb/qb_00022
+  rotate: true
+  xy: 1973, 1258
+  size: 309, 539
+  orig: 2000, 1400
+  offset: 49, 99
+  index: -1
+spine qb/qb/qb_00023
+  rotate: true
+  xy: 1399, 947
+  size: 309, 533
+  orig: 2000, 1400
+  offset: 49, 99
+  index: -1
+spine qb/qb/qb_00024
+  rotate: true
+  xy: 2, 328
+  size: 310, 533
+  orig: 2000, 1400
+  offset: 49, 99
+  index: -1
+spine qb/qb/qb_00025
+  rotate: true
+  xy: 1934, 947
+  size: 309, 519
+  orig: 2000, 1400
+  offset: 50, 99
+  index: -1
+spine qb/qb/qb_00026
+  rotate: true
+  xy: 402, 1574
+  size: 308, 527
+  orig: 2000, 1400
+  offset: 50, 91
+  index: -1
+spine qb/qb/qb_00027
+  rotate: true
+  xy: 1937, 635
+  size: 310, 516
+  orig: 2000, 1400
+  offset: 48, 91
+  index: -1
+spine qb/qb/qb_00028
+  rotate: true
+  xy: 2198, 317
+  size: 311, 514
+  orig: 2000, 1400
+  offset: 48, 93
+  index: -1
+spine qb/qb/qb_00030
+  rotate: true
+  xy: 931, 1572
+  size: 308, 493
+  orig: 2000, 1400
+  offset: 48, 114
+  index: -1
+spine qb/qb/qb_00032
+  rotate: true
+  xy: 1426, 1569
+  size: 308, 493
+  orig: 2000, 1400
+  offset: 48, 114
+  index: -1
+spine qb/qb/qb_00034
+  rotate: true
+  xy: 812, 1884
+  size: 307, 487
+  orig: 2000, 1400
+  offset: 50, 142
+  index: -1
+spine qb/qb/qb_00036
+  rotate: true
+  xy: 1921, 1569
+  size: 308, 476
+  orig: 2000, 1400
+  offset: 50, 158
+  index: -1
+spine qb/qb/qb_00038
+  rotate: true
+  xy: 2399, 1569
+  size: 308, 476
+  orig: 2000, 1400
+  offset: 51, 158
+  index: -1
+spine qb/qb/qb_00040
+  rotate: true
+  xy: 961, 1261
+  size: 309, 461
+  orig: 2000, 1400
+  offset: 53, 173
+  index: -1
+spine qb/qb/qb_00042
+  rotate: true
+  xy: 1719, 1879
+  size: 307, 460
+  orig: 2000, 1400
+  offset: 54, 174
+  index: -1
+spine qb/qb/qb_00045
+  rotate: true
+  xy: 1729, 2188
+  size: 306, 477
+  orig: 2000, 1400
+  offset: 54, 179
+  index: -1
+spine qb/qb/qb_00047
+  rotate: true
+  xy: 2181, 1879
+  size: 307, 478
+  orig: 2000, 1400
+  offset: 53, 180
+  index: -1
+spine qb/qb/qb_00049
+  rotate: true
+  xy: 2, 1264
+  size: 308, 477
+  orig: 2000, 1400
+  offset: 52, 179
+  index: -1
+spine qb/qb/qb_00051
+  rotate: true
+  xy: 481, 1262
+  size: 308, 478
+  orig: 2000, 1400
+  offset: 52, 180
+  index: -1
+spine qb/qb/qb_00053
+  rotate: true
+  xy: 2208, 2188
+  size: 306, 477
+  orig: 2000, 1400
+  offset: 54, 179
+  index: -1
+spine qb/qb/qb_00056
+  rotate: true
+  xy: 914, 638
+  size: 310, 466
+  orig: 2000, 1400
+  offset: 50, 198
+  index: -1
+spine qb/qb/qb_00058
+  rotate: true
+  xy: 2, 953
+  size: 309, 469
+  orig: 2000, 1400
+  offset: 51, 198
+  index: -1
+spine qb/qb/qb_00060
+  rotate: true
+  xy: 2455, 630
+  size: 310, 466
+  orig: 2000, 1400
+  offset: 50, 198
+  index: -1
+spine qb/qb/qb_00062
+  rotate: true
+  xy: 473, 951
+  size: 309, 469
+  orig: 2000, 1400
+  offset: 51, 198
+  index: -1
+spine qb/qb/qb_00064
+  rotate: true
+  xy: 944, 950
+  size: 309, 453
+  orig: 2000, 1400
+  offset: 52, 229
+  index: -1
+spine qb/qb/qb_00066
+  rotate: true
+  xy: 2455, 942
+  size: 309, 455
+  orig: 2000, 1400
+  offset: 51, 229
+  index: -1
+spine qb/qb/qb_00068
+  rotate: true
+  xy: 2, 642
+  size: 309, 453
+  orig: 2000, 1400
+  offset: 52, 229
+  index: -1
+spine qb/qb/qb_00070
+  rotate: true
+  xy: 457, 640
+  size: 309, 455
+  orig: 2000, 1400
+  offset: 51, 229
+  index: -1
+spine qb/qb/qb_00072
+  rotate: true
+  xy: 835, 2193
+  size: 301, 444
+  orig: 2000, 1400
+  offset: 53, 260
+  index: -1
+spine qb/qb/qb_00074
+  rotate: true
+  xy: 1281, 2193
+  size: 301, 446
+  orig: 2000, 1400
+  offset: 53, 260
+  index: -1
+spine qb/qb/qb_00076
+  rotate: true
+  xy: 2, 2497
+  size: 297, 456
+  orig: 2000, 1400
+  offset: 53, 248
+  index: -1
+spine qb/qb/qb_00078
+  rotate: true
+  xy: 867, 2496
+  size: 298, 470
+  orig: 2000, 1400
+  offset: 53, 236
+  index: -1
+spine qb/qb/qb_00080
+  rotate: true
+  xy: 1339, 2496
+  size: 298, 469
+  orig: 2000, 1400
+  offset: 53, 235
+  index: -1
+spine qb/qb/qb_00084
+  rotate: true
+  xy: 1810, 2496
+  size: 298, 439
+  orig: 2000, 1400
+  offset: 53, 235
+  index: -1
+spine qb/qb/qb_00086
+  rotate: true
+  xy: 2251, 2496
+  size: 298, 426
+  orig: 2000, 1400
+  offset: 53, 235
+  index: -1
+spine qb/qb/qb_00088
+  rotate: true
+  xy: 2, 2197
+  size: 298, 406
+  orig: 2000, 1400
+  offset: 53, 235
+  index: -1
+spine qb/qb/qb_00092
+  rotate: true
+  xy: 460, 2497
+  size: 297, 405
+  orig: 2000, 1400
+  offset: 54, 235
+  index: -1
+spine qb/qb/qb_00094
+  rotate: true
+  xy: 2, 1888
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00097
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00098
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00099
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00100
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00101
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00102
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00103
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00104
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00105
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00106
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00107
+  rotate: true
+  xy: 407, 1885
+  size: 307, 403
+  orig: 2000, 1400
+  offset: 44, 235
+  index: -1
+spine qb/qb/qb_00108
+  rotate: true
+  xy: 1702, 2
+  size: 313, 934
+  orig: 2000, 1400
+  offset: 42, 231
+  index: -1

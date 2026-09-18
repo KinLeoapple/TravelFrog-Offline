@@ -1,0 +1,23 @@
+# 依赖 (npm install / electron 安装产物)
+node_modules/
+server/node_modules/
+
+# 密钥配置 (真实 key 只留本地; 复制 *.example.json 填入自己的)
+amap.key.json
+eab.key.json
+
+# 玩家存档 (运行时生成)
+server/data/
+
+# 运行日志与临时产物
+*.log
+server/_render/
+server/_config_eab/
+*.tmp
+
+# 客户端补丁的历史备份 (仅本地留档)
+js/*.bak_*
+
+# IDE
+.idea/
+.vscode/

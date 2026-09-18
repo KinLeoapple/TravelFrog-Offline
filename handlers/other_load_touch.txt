@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 113) ----
+prototype.other_load_touch=function(e){this.data.cur_touch=e.cur,this.data.touch_list=Utils.convertArray(e.list)}
+

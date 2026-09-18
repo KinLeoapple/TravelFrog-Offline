@@ -1,0 +1,97 @@
+
+drummer.png
+size: 404, 242
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+112
+  rotate: false
+  xy: 272, 106
+  size: 12, 15
+  orig: 12, 15
+  offset: 0, 0
+  index: -1
+A
+  rotate: false
+  xy: 192, 38
+  size: 72, 36
+  orig: 72, 36
+  offset: 0, 0
+  index: -1
+AAA
+  rotate: false
+  xy: 272, 142
+  size: 39, 36
+  orig: 39, 36
+  offset: 0, 0
+  index: -1
+AAAA
+  rotate: false
+  xy: 347, 37
+  size: 48, 64
+  orig: 48, 64
+  offset: 0, 0
+  index: -1
+AAAAA
+  rotate: false
+  xy: 192, 5
+  size: 58, 19
+  orig: 58, 19
+  offset: 0, 0
+  index: -1
+AAAAA1
+  rotate: false
+  xy: 192, 26
+  size: 61, 10
+  orig: 61, 10
+  offset: 0, 0
+  index: -1
+AAAAAAA
+  rotate: false
+  xy: 272, 123
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+AAAAAAAAA
+  rotate: false
+  xy: 2, 13
+  size: 188, 227
+  orig: 188, 227
+  offset: 0, 0
+  index: -1
+ABABAB
+  rotate: false
+  xy: 286, 108
+  size: 27, 13
+  orig: 27, 13
+  offset: 0, 0
+  index: -1
+S
+  rotate: false
+  xy: 192, 180
+  size: 122, 60
+  orig: 122, 60
+  offset: 0, 0
+  index: -1
+SS
+  rotate: false
+  xy: 272, 2
+  size: 73, 99
+  orig: 73, 99
+  offset: 0, 0
+  index: -1
+SSS
+  rotate: false
+  xy: 316, 103
+  size: 86, 137
+  orig: 86, 137
+  offset: 0, 0
+  index: -1
+SSSS
+  rotate: false
+  xy: 192, 76
+  size: 78, 102
+  orig: 78, 102
+  offset: 0, 0
+  index: -1

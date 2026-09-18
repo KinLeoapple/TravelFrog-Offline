@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 347) ----
+prototype.travel_load_note=function(e,t){var i=[];if(Array.isArray(e.note_list))for(var n=Tabikaeru.DataManager.instance().TravelNoteDB,r=0,o=e.note_list;r<o.length;r++){var a=o[r],s=n.get(a.id);if(s){var c=new TravelNoteData;c.id=a.id,c.read=a.read,c.timestamp=a.timestamp,c.config=n.get(a.id),i.push(c)}}this.travelNodeList=i,this.updateRedot()}
+

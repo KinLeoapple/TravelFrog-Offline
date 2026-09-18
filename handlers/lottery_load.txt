@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 292) ----
+prototype.lottery_load=function(e){e.phase&&(this.data=e,this.data.select_list=Utils.convertArray(this.data.select_list),this.data.answer=Utils.convertArray(this.data.answer),this.data.right_flag=Utils.convertArray(this.data.right_flag),this.data.reward=Utils.convertArray(this.data.reward))}
+

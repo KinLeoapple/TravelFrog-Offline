@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 238) ----
+prototype.cooking_load_cooking=function(e){this.serverData=e||this.serverData,this.serverData.task_list=Utils.convertArray(this.serverData.task_list),this.invalidateRedot(),this.dispatchEvent(new core.Event(CookingEventType.UPDATE_LIST))}
+

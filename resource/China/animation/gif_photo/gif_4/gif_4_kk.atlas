@@ -1,0 +1,69 @@
+
+gif_4_kk.png
+size: 460, 177
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+kk
+  rotate: true
+  xy: 2, 4
+  size: 171, 178
+  orig: 171, 178
+  offset: 0, 0
+  index: -1
+kk-bag
+  rotate: false
+  xy: 412, 58
+  size: 46, 33
+  orig: 46, 33
+  offset: 0, 0
+  index: -1
+kk-bag1
+  rotate: true
+  xy: 338, 27
+  size: 64, 72
+  orig: 64, 97
+  offset: 0, 25
+  index: -1
+kk-bag2
+  rotate: false
+  xy: 412, 3
+  size: 28, 53
+  orig: 28, 53
+  offset: 0, 0
+  index: -1
+kk-body
+  rotate: false
+  xy: 182, 27
+  size: 154, 148
+  orig: 154, 149
+  offset: 0, 0
+  index: -1
+kk-foot
+  rotate: false
+  xy: 182, 2
+  size: 31, 23
+  orig: 31, 23
+  offset: 0, 0
+  index: -1
+kk-foot2
+  rotate: true
+  xy: 215, 2
+  size: 23, 29
+  orig: 23, 29
+  offset: 0, 0
+  index: -1
+kk-head
+  rotate: true
+  xy: 338, 93
+  size: 82, 120
+  orig: 82, 125
+  offset: 0, 5
+  index: -1
+kk-weiba
+  rotate: true
+  xy: 246, 8
+  size: 17, 34
+  orig: 17, 34
+  offset: 0, 0
+  index: -1

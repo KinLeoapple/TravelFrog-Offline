@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 122) ----
+prototype.story_load=function(e,t){this.storyList=Array.isArray(e.stories)?e.stories:[],this.newStoryID=e.new_story_id||0}
+

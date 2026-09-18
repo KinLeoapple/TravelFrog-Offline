@@ -1,0 +1,111 @@
+
+gif_5_role_yhc.png
+size: 247, 544
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+yhb-arm2
+  rotate: false
+  xy: 208, 259
+  size: 31, 46
+  orig: 32, 52
+  offset: 0, 6
+  index: -1
+yhc-arm1
+  rotate: true
+  xy: 208, 207
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+yhc-body
+  rotate: false
+  xy: 137, 84
+  size: 58, 42
+  orig: 70, 60
+  offset: 11, 18
+  index: -1
+yhc-cjl
+  rotate: true
+  xy: 208, 324
+  size: 20, 37
+  orig: 20, 37
+  offset: 0, 0
+  index: -1
+yhc-cjr
+  rotate: true
+  xy: 208, 307
+  size: 15, 34
+  orig: 15, 34
+  offset: 0, 0
+  index: -1
+yhc-head
+  rotate: false
+  xy: 208, 230
+  size: 31, 27
+  orig: 32, 28
+  offset: 1, 1
+  index: -1
+yhc-legr
+  rotate: true
+  xy: 197, 49
+  size: 38, 44
+  orig: 38, 44
+  offset: 0, 0
+  index: -1
+yhc-lleg
+  rotate: true
+  xy: 190, 6
+  size: 41, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1
+yhccb-l
+  rotate: false
+  xy: 137, 31
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+yhccb-l2
+  rotate: true
+  xy: 208, 346
+  size: 26, 37
+  orig: 26, 37
+  offset: 0, 0
+  index: -1
+yhccb-r
+  rotate: false
+  xy: 208, 135
+  size: 22, 70
+  orig: 48, 70
+  offset: 26, 0
+  index: -1
+yhccb-r2
+  rotate: false
+  xy: 208, 89
+  size: 20, 44
+  orig: 20, 44
+  offset: 0, 0
+  index: -1
+合成 1_00000
+  rotate: true
+  xy: 2, 128
+  size: 244, 204
+  orig: 2000, 1400
+  offset: 67, 348
+  index: -1
+合成 1_00001
+  rotate: false
+  xy: 2, 374
+  size: 239, 168
+  orig: 2000, 1400
+  offset: 55, 398
+  index: -1
+合成 1_00002
+  rotate: false
+  xy: 2, 2
+  size: 133, 124
+  orig: 2000, 1400
+  offset: 0, 329
+  index: -1

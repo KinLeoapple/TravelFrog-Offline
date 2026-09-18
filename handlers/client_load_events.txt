@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 567) ----
+prototype.client_load_events=function(e,t){this.travelEventList=Array.isArray(e)?e:[],this.travelEventList.sort(function(e,t){var i=e.evt_type==TimerEvent.Type.Picture,n=t.evt_type==TimerEvent.Type.Picture;return i==n?0:i?1:-1});for(var i=0,n=0;n<this.travelEventList.length;n++){var r=this.travelEventList[n];switch(r.evt_type){case TimerEvent.Type.BackHome:i+=r.evt_value[2];break;case TimerEvent.Type.PartyResult:i+=r.evt_value[2]}}i>0&&this.getModel(UserModel).subClover(i),this.filtrateEvent(),this.dispatchEvent(new core.Event(TravelEventType.updateEvents,!1))}
+

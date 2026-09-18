@@ -1,0 +1,41 @@
+
+gif_6_role_cw.png
+size: 254, 92
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+cw-arm
+  rotate: false
+  xy: 205, 11
+  size: 33, 26
+  orig: 33, 26
+  offset: 0, 0
+  index: -1
+cw-daizi
+  rotate: true
+  xy: 205, 39
+  size: 51, 47
+  orig: 53, 49
+  offset: 1, 1
+  index: -1
+cw-eye
+  rotate: false
+  xy: 240, 28
+  size: 9, 9
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+cw1
+  rotate: false
+  xy: 2, 2
+  size: 88, 88
+  orig: 89, 89
+  offset: 0, 1
+  index: -1
+图层 9
+  rotate: false
+  xy: 92, 18
+  size: 111, 72
+  orig: 111, 80
+  offset: 0, 7
+  index: -1

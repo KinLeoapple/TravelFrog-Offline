@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 141) ----
+prototype.share_load=function(e){for(var t=Utils.convertArray(e.pic_list),i=0,n=t;i<n.length;i++){var r=n[i];this.rewardData[r.id]=r.clover}}
+

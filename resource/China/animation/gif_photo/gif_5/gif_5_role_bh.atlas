@@ -1,0 +1,55 @@
+
+gif_5_role_bh.png
+size: 206, 96
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+bh-body
+  rotate: false
+  xy: 2, 2
+  size: 83, 92
+  orig: 131, 116
+  offset: 39, 23
+  index: -1
+bh-box
+  rotate: true
+  xy: 136, 44
+  size: 50, 49
+  orig: 51, 50
+  offset: 1, 0
+  index: -1
+bh-eye
+  rotate: false
+  xy: 87, 2
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+bh-eye 拷贝
+  rotate: false
+  xy: 99, 4
+  size: 9, 10
+  orig: 9, 10
+  offset: 0, 0
+  index: -1
+bh-foot
+  rotate: true
+  xy: 182, 8
+  size: 34, 22
+  orig: 34, 27
+  offset: 0, 4
+  index: -1
+bh-rarm
+  rotate: false
+  xy: 136, 12
+  size: 44, 30
+  orig: 45, 33
+  offset: 0, 1
+  index: -1
+bh-wb
+  rotate: true
+  xy: 87, 16
+  size: 78, 47
+  orig: 78, 51
+  offset: 0, 3
+  index: -1

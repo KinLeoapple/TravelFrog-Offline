@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>旅行青蛙 · 开发者模式</title>
+<style>
+  :root {
+    --bg: #14161a; --panel: #1d2026; --panel2: #242830; --border: #333844;
+    --text: #e8e6e0; --dim: #9aa0ab; --acc: #7ec97e; --warn: #e0a458; --err: #e07a7a;
+    --btn: #2d323c; --btn-h: #3a4150;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 13px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif;
+    padding: 12px; max-width: 520px; margin: 0 auto;
+  }
+  h1 { font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--dim); font-size: 11px; margin-bottom: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+  .card h2 { font-size: 12px; color: var(--dim); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .5px; }
+  /* 账户栏 */
+  .accrow { display: flex; gap: 6px; }
+  .accrow input[type=text] {
+    flex: 1; background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+    border-radius: 6px; padding: 7px 10px; font-size: 13px; outline: none;
+  }
+  .badge { font-size: 11px; padding: 3px 8px; border-radius: 10px; background: var(--panel2); color: var(--dim); align-self: center; white-space: nowrap; }
+  .badge.on { color: var(--acc); border: 1px solid var(--acc); }
+  .badge.off { color: var(--warn); border: 1px solid var(--warn); }
+  /* 按钮网格 */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  button {
+    background: var(--btn); color: var(--text); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 4px; font-size: 12px; cursor: pointer; transition: background .12s;
+  }
+  button:hover { background: var(--btn-h); }
+  button:active { transform: translateY(1px); }
+  button.danger { color: var(--err); border-color: var(--err); }
+  button.wide { grid-column: 1 / -1; }
+  /* 物品发放 */
+  .give { display: flex; gap: 6px; margin-top: 4px; }
+  .give select { flex: 1; background: var(--panel2); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 7px; font-size: 12px; }
+  .give input { width: 64px; background: var(--panel2); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 7px; font-size: 12px; text-align: center; }
+  /* 状态面板 */
+  #status { font-size: 12px; color: var(--acc); white-space: pre-wrap; }
+  /* 日志 */
+  #log {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px; font: 11px/1.7 Consolas, monospace; max-height: 220px; overflow-y: auto;
+  }
+  #log .t { color: var(--dim); }
+  #log .ok { color: var(--acc); }
+  #log .no { color: var(--err); }
+  #log .off { color: var(--warn); }
+</style>
+</head>
+<body>
+<h1>旅行青蛙 · 开发者模式</h1>
+<div class="sub">与游戏页面并排打开 · 动作实时推送 · 游戏无需刷新</div>
+
+<div class="card">
+  <div class="accrow">
+    <input type="text" id="account" placeholder="账户名 (游戏登录的 account)" list="accList">
+    <datalist id="accList"></datalist>
+    <span class="badge off" id="liveBadge">离线</span>
+    <button onclick="refreshAccounts()" style="padding:7px 10px">↻</button>
+  </div>
+  <div id="status" style="margin-top:8px"></div>
+</div>
+
+<div class="card">
+  <h2>青蛙</h2>
+  <div class="grid">
+    <button onclick="act('frog_depart')">立即出门</button>
+    <button onclick="act('frog_home')">立即回家</button>
+    <button onclick="act('frog_stray')">空手放浪</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>三叶草 / 货币</h2>
+  <div class="grid">
+    <button onclick="act('clover_all')">全部成熟</button>
+    <button onclick="act('clover_clear')">清空草地</button>
+    <button onclick="act('add_clover',{n:1000})">+1000 草</button>
+    <button onclick="act('add_ticket',{n:10})">+10 券</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>访客</h2>
+  <div class="grid">
+    <button onclick="act('guest_come')">小伙伴到访</button>
+    <button onclick="act('guest_leave')">小伙伴离开</button>
+    <button onclick="act('visitor_come')">邮差到访</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>涂鸦派对</h2>
+  <div class="grid">
+    <button onclick="act('drawing_invite',{guest:document.getElementById('partyGuest').value})">强制邀请</button>
+    <button onclick="act('drawing_advance')">快进一档</button>
+    <button onclick="act('drawing_reset')">全部重置</button>
+  </div>
+  <div class="give">
+    <select id="partyGuest">
+      <option value="0">困困 (乌龟)</option>
+      <option value="1">胖胖 (猫头鹰)</option>
+      <option value="2">跳跳 (松鼠)</option>
+    </select>
+    <span style="align-self:center;color:#888;font-size:12px">快进: 0→邀请→接受→装包出发→回家结算</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>内容验证</h2>
+  <div class="grid">
+    <button onclick="act('photo_new',{n:3})">+3 新照片</button>
+    <button onclick="act('photo_album',{n:6})">+6 归档照</button>
+    <button onclick="act('note_new',{n:2})">+2 日记</button>
+    <button onclick="act('mail_new',{n:1})">+1 邮件</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>物品</h2>
+  <div class="grid">
+    <button onclick="act('fill_bag')">装满背包</button>
+    <button onclick="act('clear_bag')">清空背包</button>
+  </div>
+  <div class="give">
+    <select id="itemSel"></select>
+    <input type="number" id="itemCount" value="1" min="1" max="99">
+    <button onclick="giveItem()">发放</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>存档 / 调试</h2>
+  <div class="grid">
+    <button onclick="act('shop_reset')">清商店限购</button>
+    <button onclick="act('push_refresh')">全量重推</button>
+    <button onclick="act('guide_complete')">完成新手引导</button>
+    <button onclick="act('status')">查状态</button>
+    <button class="danger wide" onclick="resetSave()">重置存档 (不可恢复)</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>日志</h2>
+  <div id="log"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const logEl = $("log");
+
+function log(msg, cls) {
+  const t = new Date().toLocaleTimeString("zh-CN", { hour12: false });
+  const div = document.createElement("div");
+  div.innerHTML = `<span class="t">[${t}]</span> <span class="${cls || ""}">${msg}</span>`;
+  logEl.prepend(div);
+  while (logEl.children.length > 80) logEl.lastChild.remove();
+}
+
+function account() {
+  const a = $("account").value.trim();
+  if (!a) { log("请先填写账户名", "no"); return null; }
+  return a;
+}
+
+async function act(action, params) {
+  const a = account(); if (!a) return;
+  try {
+    const r = await fetch("/gm/api", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ account: a, action, params: params || {} }),
+    }).then((x) => x.json());
+    log(`${action} → ${r.info}${r.online === false ? " (离线执行, 上线后生效)" : ""}`, r.ok ? "ok" : "no");
+    if (r.ok && action === "status") $("status").textContent = r.info;
+    if (r.online) $("liveBadge").className = "badge on", $("liveBadge").textContent = "在线";
+    else $("liveBadge").className = "badge off", $("liveBadge").textContent = "离线";
+  } catch (e) { log(`${action} 请求失败: ${e.message}`, "no"); }
+}
+
+function resetSave() {
+  const a = account(); if (!a) return;
+  if (!confirm(`确认重置存档 "${a}"? 全部进度将丢失且不可恢复!`)) return;
+  act("reset_save");
+}
+
+async function giveItem() {
+  const itemId = Number($("itemSel").value);
+  if (!itemId) { log("请选择物品", "no"); return; }
+  await act("give_item", { item_id: itemId, count: Number($("itemCount").value) || 1 });
+}
+
+// ---- 初始化: 在线账户 + 物品表 ----
+async function refreshAccounts() {
+  try {
+    const r = await fetch("/gm/api/accounts").then((x) => x.json());
+    $("accList").innerHTML = r.accounts.map((x) => `<option value="${x.account}">`).join("");
+    if (r.accounts.length === 1) $("account").value = r.accounts[0].account;
+    for (const x of r.accounts) {
+      log(`在线: ${x.account} (蛙${x.frog === 1 ? "旅行中" : x.frog === 0 ? "在家" : "?"})`, "off");
+    }
+    if (!r.accounts.length) log("无在线连接; 填写账户名可离线执行", "off");
+  } catch (e) { log("拉取在线账户失败: " + e.message, "no"); }
+}
+
+async function loadItems() {
+  try {
+    const r = await fetch("/gm/api/items").then((x) => x.json());
+    const groups = {};
+    for (const it of r.items) (groups[it.type_label] = groups[it.type_label] || []).push(it);
+    let html = "";
+    for (const g of Object.keys(groups).sort()) {
+      html += `<optgroup label="${g}">`;
+      for (const it of groups[g]) html += `<option value="${it.id}">${it.id} · ${it.name}</option>`;
+      html += "</optgroup>";
+    }
+    $("itemSel").innerHTML = html;
+  } catch (e) { log("物品表加载失败: " + e.message, "no"); }
+}
+
+loadItems();
+refreshAccounts();
+setInterval(refreshAccounts, 10000);
+log("GM 面板就绪。游戏页面登录后在此选择账户即可开始调试。");
+</script>
+</body>
+</html>

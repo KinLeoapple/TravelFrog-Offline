@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 212) ----
+prototype.clover_load_clovers=function(e,t){null!=e?(this.cloverGrowList=e,this.dispatchEvent(new core.Event(RoleEventType.updateCloverGrow))):core.Log.warning("返回的协议 clover_load_clovers 没有获取到有效数据，请检查协议参数是否已修改")}
+

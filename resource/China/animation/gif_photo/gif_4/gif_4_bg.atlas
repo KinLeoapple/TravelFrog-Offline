@@ -1,0 +1,13 @@
+
+gif_4_bg.png
+size: 904, 634
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+bg
+  rotate: false
+  xy: 2, 2
+  size: 900, 630
+  orig: 900, 630
+  offset: 0, 0
+  index: -1

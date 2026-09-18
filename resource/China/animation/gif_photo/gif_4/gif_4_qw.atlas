@@ -1,0 +1,48 @@
+
+gif_4_qw.png
+size: 398, 173
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+qw
+  rotate: false
+  xy: 2, 2
+  size: 164, 169
+  orig: 164, 169
+  offset: 0, 0
+  index: -1
+qw-body
+  rotate: true
+  xy: 168, 10
+  size: 161, 103
+  orig: 161, 103
+  offset: 0, 0
+  index: -1
+qw-head
+  rotate: false
+  xy: 273, 82
+  size: 123, 89
+  orig: 123, 89
+  offset: 0, 0
+  index: -1
+qw-leye
+  rotate: false
+  xy: 324, 54
+  size: 52, 26
+  orig: 52, 26
+  offset: 0, 0
+  index: -1
+qw-lhand
+  rotate: true
+  xy: 273, 12
+  size: 68, 49
+  orig: 68, 49
+  offset: 0, 0
+  index: -1
+qw-reye
+  rotate: false
+  xy: 324, 21
+  size: 23, 31
+  orig: 23, 31
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,12 @@
+{
+  "name": "travel-frog-offline-server",
+  "version": "1.0.0",
+  "description": "旅行青蛙中国之旅 自研离线服务器 (协议层+游戏逻辑)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

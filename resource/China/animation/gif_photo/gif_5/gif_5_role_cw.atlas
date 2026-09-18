@@ -1,0 +1,48 @@
+
+gif_5_role_cw.png
+size: 320, 154
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+cw-arm
+  rotate: false
+  xy: 283, 66
+  size: 31, 34
+  orig: 32, 35
+  offset: 0, 1
+  index: -1
+cw-body
+  rotate: true
+  xy: 155, 16
+  size: 136, 126
+  orig: 151, 151
+  offset: 15, 7
+  index: -1
+cw-body2
+  rotate: false
+  xy: 2, 2
+  size: 151, 150
+  orig: 151, 150
+  offset: 0, 0
+  index: -1
+cw-eye
+  rotate: true
+  xy: 155, 5
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+cw-face
+  rotate: false
+  xy: 283, 24
+  size: 26, 40
+  orig: 26, 40
+  offset: 0, 0
+  index: -1
+cw-maozi
+  rotate: true
+  xy: 283, 102
+  size: 50, 35
+  orig: 53, 36
+  offset: 1, 1
+  index: -1

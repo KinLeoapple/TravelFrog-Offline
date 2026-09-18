@@ -1,0 +1,19 @@
+{
+    "description": "offline build: Test channel + local server",
+    "useNode": "server_local",
+    "channelType": 1,
+    "printLog": true,
+    "showLog": false,
+    "saveLogCount": 1000,
+    "version": "1.0.5",
+
+    "serverList": {
+        "server_local": {
+            "description": "local offline server",
+            "gameServer": ["ws://127.0.0.1:8080"],
+            "platformID": "ONE",
+            "serverName": "local",
+            "channelID": "P10528"
+        }
+    }
+}

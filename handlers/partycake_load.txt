@@ -1,0 +1,4 @@
+// ---- 实现 1/1 (长度 838) ----
+prototype.partycake_load=function(e){var t=this;this.data=Utils.convertArrayAll(e),this.data.end_time=e.end_time,this.data.cream=e.cream,this.data.sugar=e.sugar,this.data.pre_cream=e.pre_cream,this.data.pre_sugar=e.pre_sugar,this.data.cur_state=e.cur_state,this.data.part=e.part,this.data.layers=Utils.convertArray(e.layers),this.data.task_list=Utils.convertArray(e.task_list),this.data.share_get=Utils.convertArray(e.share_get),(this.data.cur_state==Tabikaeru.Define.PartyCakeState.qa||this.data.cur_state==Tabikaeru.Define.PartyCakeState.qa_reward)&&this.req_load_qa(),this.isOpen()&&(this.checkRedot(),egret.clearTimeout(this.timerActivity),this.timerActivity=egret.setTimeout(function(){t.closeActivity()
+},this,1e3*(this.getActivityTime()[1]-core.Time.getServerTime()+1))),this.dispatchEvent(new core.Event(PartyCakeEventType.LOAD))}
+

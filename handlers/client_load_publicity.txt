@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 173) ----
+prototype.client_load_publicity=function(e){for(var t=Utils.convertArray(e.id_list),i=0,n=t;i<n.length;i++){var r=n[i];this.publicityReward[r]=!0}this.checkPublicityRedot()}
+

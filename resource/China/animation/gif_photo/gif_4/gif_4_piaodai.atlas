@@ -1,0 +1,20 @@
+
+gif_4_piaodai.png
+size: 675, 417
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+piaodai1
+  rotate: true
+  xy: 350, 21
+  size: 394, 323
+  orig: 394, 329
+  offset: 0, 6
+  index: -1
+piaodai2
+  rotate: false
+  xy: 2, 2
+  size: 346, 413
+  orig: 346, 413
+  offset: 0, 0
+  index: -1

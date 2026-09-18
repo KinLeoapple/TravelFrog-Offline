@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 237) ----
+prototype.wishingpool_load=function(e){if(this.data=Utils.convertArrayAll(e),this.data.end_time>0){var t=core.PageManage.getInstance().getControl(MainOutController,core.ViewLayerType.SceneLayer),i=t&&t.getView();i&&i.checkWishingPool()}}
+

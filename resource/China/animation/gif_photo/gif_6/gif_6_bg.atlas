@@ -1,0 +1,13 @@
+
+gif_6_bg.png
+size: 504, 354
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+山东博物馆/文物
+  rotate: false
+  xy: 2, 2
+  size: 500, 350
+  orig: 500, 350
+  offset: 0, 0
+  index: -1

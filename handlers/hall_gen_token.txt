@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 124) ----
+prototype.hall_gen_token=function(e,t){e.code;this.token=e.token,this.dispatchEvent(new core.Event(UserEventType.getToken))}
+

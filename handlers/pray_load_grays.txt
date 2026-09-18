@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 272) ----
+prototype.pray_load_grays=function(e,t){e&&(this.prayCraftList=Utils.convertArray(e.wishs),this.stampCraftList=Utils.convertArray(e.stamps),this.boxCraftList=Utils.convertArray(e.boxes),this.makingPraycraft=e.wish_new,this.makingStampcraft=e.stamp_new,this.updateRedot())}
+

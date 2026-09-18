@@ -1,0 +1,90 @@
+
+gif_4_cw.png
+size: 455, 189
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+cw
+  rotate: true
+  xy: 2, 11
+  size: 176, 201
+  orig: 176, 201
+  offset: 0, 0
+  index: -1
+cw-body
+  rotate: false
+  xy: 205, 14
+  size: 159, 173
+  orig: 162, 201
+  offset: 0, 0
+  index: -1
+cw-er1
+  rotate: false
+  xy: 434, 67
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+cw-er2
+  rotate: false
+  xy: 430, 15
+  size: 19, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+cw-eye1
+  rotate: true
+  xy: 205, 3
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: -1
+cw-eye2
+  rotate: false
+  xy: 219, 2
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+cw-face
+  rotate: true
+  xy: 366, 86
+  size: 101, 87
+  orig: 101, 87
+  offset: 0, 0
+  index: -1
+cw-larm
+  rotate: false
+  xy: 404, 53
+  size: 28, 31
+  orig: 28, 39
+  offset: 0, 0
+  index: -1
+cw-lhand
+  rotate: false
+  xy: 366, 3
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+cw-mouse
+  rotate: false
+  xy: 430, 33
+  size: 23, 18
+  orig: 23, 18
+  offset: 0, 0
+  index: -1
+cw-rarm
+  rotate: true
+  xy: 396, 8
+  size: 33, 32
+  orig: 33, 32
+  offset: 0, 0
+  index: -1
+cw-rhand
+  rotate: true
+  xy: 366, 43
+  size: 41, 36
+  orig: 41, 36
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,216 @@
+
+sleep_3.png
+size: 621, 2519
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+sleep_3/sleep3_1001/bed1
+  rotate: false
+  xy: 320, 767
+  size: 266, 129
+  orig: 266, 130
+  offset: 0, 1
+  index: -1
+sleep_3/sleep3_1001/bed2
+  rotate: false
+  xy: 2, 1544
+  size: 319, 174
+  orig: 319, 174
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1002/bed1
+  rotate: false
+  xy: 320, 898
+  size: 266, 130
+  orig: 266, 130
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1002/bed2
+  rotate: false
+  xy: 2, 501
+  size: 315, 169
+  orig: 315, 169
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1003/bed1
+  rotate: false
+  xy: 323, 1566
+  size: 266, 132
+  orig: 266, 132
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1003/bed2
+  rotate: false
+  xy: 2, 132
+  size: 306, 184
+  orig: 306, 184
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1004/bed1
+  rotate: false
+  xy: 323, 1432
+  size: 266, 132
+  orig: 266, 132
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1004/bed2
+  rotate: false
+  xy: 2, 318
+  size: 307, 181
+  orig: 307, 181
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1005/bed1
+  rotate: false
+  xy: 322, 1298
+  size: 266, 132
+  orig: 266, 132
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1005/bed2
+  rotate: false
+  xy: 2, 1889
+  size: 320, 192
+  orig: 320, 192
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1006/bed1
+  rotate: false
+  xy: 322, 1164
+  size: 266, 132
+  orig: 266, 132
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1006/bed2
+  rotate: false
+  xy: 2, 870
+  size: 316, 203
+  orig: 316, 203
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1007/bed1
+  rotate: false
+  xy: 321, 1030
+  size: 266, 132
+  orig: 266, 132
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1007/bed2
+  rotate: false
+  xy: 2, 1075
+  size: 317, 204
+  orig: 317, 204
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1008/bed1
+  rotate: false
+  xy: 339, 2232
+  size: 274, 147
+  orig: 274, 147
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1008/bed2
+  rotate: false
+  xy: 310, 36
+  size: 301, 197
+  orig: 301, 197
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1009/bed1
+  rotate: false
+  xy: 339, 2381
+  size: 279, 136
+  orig: 279, 136
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1009/bed2
+  rotate: false
+  xy: 2, 1720
+  size: 320, 167
+  orig: 320, 167
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1010/bed1
+  rotate: false
+  xy: 324, 1832
+  size: 269, 130
+  orig: 269, 130
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1010/bed2
+  rotate: false
+  xy: 2, 2083
+  size: 325, 215
+  orig: 325, 215
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1011/bed1
+  rotate: false
+  xy: 329, 2098
+  size: 269, 132
+  orig: 269, 147
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1011/bed2
+  rotate: false
+  xy: 2, 672
+  size: 315, 196
+  orig: 315, 196
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1012/bed1
+  rotate: false
+  xy: 329, 1964
+  size: 269, 132
+  orig: 269, 147
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1012/bed2
+  rotate: false
+  xy: 311, 235
+  size: 306, 207
+  orig: 306, 207
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1013/bed1
+  rotate: false
+  xy: 324, 1700
+  size: 269, 130
+  orig: 269, 130
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1013/bed2
+  rotate: false
+  xy: 2, 1281
+  size: 318, 261
+  orig: 318, 261
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1013/bed3
+  rotate: true
+  xy: 2, 2
+  size: 128, 248
+  orig: 128, 248
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1013/bed4
+  rotate: false
+  xy: 319, 575
+  size: 300, 190
+  orig: 300, 190
+  offset: 0, 0
+  index: -1
+sleep_3/sleep3_1014/bed1
+  rotate: false
+  xy: 319, 444
+  size: 266, 129
+  orig: 266, 130
+  offset: 0, 1
+  index: -1
+sleep_3/sleep3_1014/bed2
+  rotate: false
+  xy: 2, 2300
+  size: 335, 217
+  orig: 335, 217
+  offset: 0, 0
+  index: -1

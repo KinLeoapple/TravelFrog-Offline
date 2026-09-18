@@ -1,0 +1,20 @@
+
+egg_7_linyu.png
+size: 285, 218
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+shuidi
+  rotate: true
+  xy: 255, 174
+  size: 42, 28
+  orig: 42, 28
+  offset: 0, 0
+  index: -1
+组 1 拷贝
+  rotate: true
+  xy: 2, 2
+  size: 214, 251
+  orig: 214, 251
+  offset: 0, 0
+  index: -1

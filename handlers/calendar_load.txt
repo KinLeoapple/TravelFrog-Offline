@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 362) ----
+prototype.calendar_load=function(e){this.data.new_flag=Utils.convertArray(e.new_flag),this.data.task_list=Utils.convertArray(e.task_list);for(var t=Utils.convertArray(e.lucky_days),i=0;i<t.length;i++)this.data.lucky_days[t[i].day]=t[i].item_id;t=Utils.convertArray(e.st_days);for(var i=0;i<t.length;i++)this.data.st_days[t[i].day]=t[i].item_id;this.checkRedot()}
+

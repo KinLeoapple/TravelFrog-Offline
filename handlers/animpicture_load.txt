@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 180) ----
+prototype.animpicture_load=function(e){e=Utils.convertArrayAll(e);for(var t=0;t<e.pic_list.length;t++)e.pic_list[t].pictures=Utils.convertArray(e.pic_list[t].pictures);this.data=e}
+

@@ -1,0 +1,153 @@
+
+gif_4_tt.png
+size: 438, 269
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+tt
+  rotate: true
+  xy: 2, 48
+  size: 219, 218
+  orig: 219, 218
+  offset: 0, 0
+  index: -1
+tt-body
+  rotate: false
+  xy: 222, 154
+  size: 138, 113
+  orig: 138, 131
+  offset: 0, 18
+  index: -1
+tt-eye1
+  rotate: false
+  xy: 53, 5
+  size: 22, 8
+  orig: 22, 8
+  offset: 0, 0
+  index: -1
+tt-eye2
+  rotate: true
+  xy: 77, 4
+  size: 9, 15
+  orig: 9, 15
+  offset: 0, 0
+  index: -1
+tt-head
+  rotate: true
+  xy: 362, 178
+  size: 89, 74
+  orig: 89, 105
+  offset: 0, 0
+  index: -1
+tt-larm
+  rotate: true
+  xy: 53, 15
+  size: 31, 46
+  orig: 31, 54
+  offset: 0, 0
+  index: -1
+tt-ler
+  rotate: false
+  xy: 328, 27
+  size: 29, 42
+  orig: 29, 42
+  offset: 0, 0
+  index: -1
+tt-lfoot
+  rotate: false
+  xy: 362, 155
+  size: 38, 21
+  orig: 38, 21
+  offset: 0, 0
+  index: -1
+tt-lhand
+  rotate: false
+  xy: 376, 12
+  size: 26, 40
+  orig: 26, 47
+  offset: 0, 0
+  index: -1
+tt-lhand2
+  rotate: false
+  xy: 356, 2
+  size: 18, 23
+  orig: 18, 23
+  offset: 0, 0
+  index: -1
+tt-mouse
+  rotate: false
+  xy: 402, 159
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+tt-rarm
+  rotate: true
+  xy: 171, 9
+  size: 37, 35
+  orig: 37, 35
+  offset: 0, 0
+  index: -1
+tt-rer
+  rotate: true
+  xy: 2, 5
+  size: 41, 49
+  orig: 41, 49
+  offset: 0, 0
+  index: -1
+tt-rfoot
+  rotate: true
+  xy: 208, 7
+  size: 39, 33
+  orig: 39, 33
+  offset: 0, 0
+  index: -1
+tt-rhand
+  rotate: false
+  xy: 101, 8
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+tt-rhand1
+  rotate: true
+  xy: 328, 3
+  size: 22, 26
+  orig: 22, 26
+  offset: 0, 0
+  index: -1
+tt-weiba1
+  rotate: true
+  xy: 222, 71
+  size: 81, 145
+  orig: 81, 145
+  offset: 0, 0
+  index: -1
+tt-weiba2
+  rotate: false
+  xy: 369, 54
+  size: 66, 99
+  orig: 66, 99
+  offset: 0, 0
+  index: -1
+tt-wj1
+  rotate: false
+  xy: 247, 8
+  size: 79, 61
+  orig: 79, 61
+  offset: 0, 0
+  index: -1
+tt-wj2
+  rotate: true
+  xy: 138, 4
+  size: 42, 31
+  orig: 42, 31
+  offset: 0, 0
+  index: -1
+tt-wj3
+  rotate: false
+  xy: 222, 48
+  size: 23, 21
+  orig: 23, 21
+  offset: 0, 0
+  index: -1

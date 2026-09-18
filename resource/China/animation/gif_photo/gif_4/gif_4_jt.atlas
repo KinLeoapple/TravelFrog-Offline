@@ -1,0 +1,20 @@
+
+gif_4_jt.png
+size: 1089, 684
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+images/bg-hei
+  rotate: false
+  xy: 2, 2
+  size: 1019, 680
+  orig: 1019, 680
+  offset: 0, 0
+  index: -1
+images/zhuhuo
+  rotate: false
+  xy: 1023, 548
+  size: 64, 134
+  orig: 66, 136
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,153 @@
+
+gif_4_yhc.png
+size: 300, 268
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+yhc
+  rotate: true
+  xy: 2, 71
+  size: 195, 180
+  orig: 195, 180
+  offset: 0, 0
+  index: -1
+yhc-body
+  rotate: false
+  xy: 184, 73
+  size: 99, 91
+  orig: 99, 91
+  offset: 0, 0
+  index: -1
+yhc-bozi
+  rotate: true
+  xy: 211, 8
+  size: 59, 44
+  orig: 59, 44
+  offset: 0, 0
+  index: -1
+yhc-chi1
+  rotate: true
+  xy: 257, 51
+  size: 16, 36
+  orig: 16, 36
+  offset: 0, 0
+  index: -1
+yhc-chi2
+  rotate: true
+  xy: 257, 2
+  size: 47, 34
+  orig: 47, 34
+  offset: 0, 0
+  index: -1
+yhc-chi3
+  rotate: false
+  xy: 184, 221
+  size: 101, 45
+  orig: 101, 45
+  offset: 0, 0
+  index: -1
+yhc-chi4
+  rotate: false
+  xy: 90, 2
+  size: 47, 67
+  orig: 47, 67
+  offset: 0, 0
+  index: -1
+yhc-eye1
+  rotate: true
+  xy: 287, 199
+  size: 19, 10
+  orig: 19, 10
+  offset: 0, 0
+  index: -1
+yhc-eye2
+  rotate: false
+  xy: 285, 85
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+yhc-head
+  rotate: false
+  xy: 211, 166
+  size: 74, 53
+  orig: 74, 53
+  offset: 0, 0
+  index: -1
+yhc-larm
+  rotate: true
+  xy: 184, 203
+  size: 16, 25
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+yhc-larm3
+  rotate: true
+  xy: 287, 220
+  size: 46, 11
+  orig: 46, 11
+  offset: 0, 0
+  index: -1
+yhc-lhand
+  rotate: true
+  xy: 285, 116
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+yhc-rarm
+  rotate: false
+  xy: 285, 132
+  size: 13, 32
+  orig: 13, 32
+  offset: 0, 0
+  index: -1
+yhc-rarm2
+  rotate: true
+  xy: 184, 187
+  size: 14, 21
+  orig: 14, 21
+  offset: 0, 0
+  index: -1
+yhc-rhand
+  rotate: false
+  xy: 287, 169
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+yhc-rhand1
+  rotate: false
+  xy: 285, 99
+  size: 12, 15
+  orig: 12, 17
+  offset: 0, 2
+  index: -1
+yhc-rhand2
+  rotate: false
+  xy: 184, 167
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+yhc-rhand22
+  rotate: true
+  xy: 285, 69
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+yhc-xu1
+  rotate: true
+  xy: 139, 9
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+yhc-xu2
+  rotate: false
+  xy: 2, 2
+  size: 86, 67
+  orig: 86, 67
+  offset: 0, 0
+  index: -1

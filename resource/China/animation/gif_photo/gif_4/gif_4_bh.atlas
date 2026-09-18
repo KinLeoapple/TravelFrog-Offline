@@ -1,0 +1,83 @@
+
+gif_4_bh.png
+size: 403, 203
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+bh
+  rotate: false
+  xy: 2, 3
+  size: 203, 198
+  orig: 209, 198
+  offset: 6, 0
+  index: -1
+bh-body
+  rotate: false
+  xy: 207, 110
+  size: 136, 91
+  orig: 164, 181
+  offset: 0, 48
+  index: -1
+bh-bozi
+  rotate: false
+  xy: 207, 38
+  size: 82, 70
+  orig: 82, 70
+  offset: 0, 0
+  index: -1
+bh-eye
+  rotate: false
+  xy: 316, 18
+  size: 11, 13
+  orig: 11, 13
+  offset: 0, 0
+  index: -1
+bh-head
+  rotate: true
+  xy: 291, 33
+  size: 75, 56
+  orig: 76, 56
+  offset: 0, 0
+  index: -1
+bh-larm
+  rotate: false
+  xy: 349, 68
+  size: 27, 47
+  orig: 37, 55
+  offset: 5, 8
+  index: -1
+bh-lhand
+  rotate: false
+  xy: 280, 11
+  size: 34, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+bh-rarm
+  rotate: true
+  xy: 207, 2
+  size: 34, 71
+  orig: 34, 74
+  offset: 0, 3
+  index: -1
+bh-rfoot
+  rotate: true
+  xy: 378, 80
+  size: 35, 23
+  orig: 35, 23
+  offset: 0, 0
+  index: -1
+bh-rhand
+  rotate: true
+  xy: 349, 32
+  size: 34, 25
+  orig: 34, 25
+  offset: 0, 0
+  index: -1
+bh-weiba
+  rotate: false
+  xy: 345, 117
+  size: 54, 84
+  orig: 62, 85
+  offset: 8, 0
+  index: -1

@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 47) ----
+prototype.weather_load=function(e){this.data=e}
+

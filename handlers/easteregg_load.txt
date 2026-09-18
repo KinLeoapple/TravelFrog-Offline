@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 107) ----
+prototype.easteregg_load=function(e){this.data=e,this.data.egg_list=Utils.convertArray(this.data.egg_list)}
+

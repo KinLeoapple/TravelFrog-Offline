@@ -1,0 +1,13 @@
+{
+  "name": "travel-frog-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "旅行青蛙·中国之旅 离线版 · Electron 桌面壳",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}

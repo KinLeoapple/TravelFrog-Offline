@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 353) ----
+prototype.encyclopedia_load=function(e){e=Utils.convertArrayAll(e),this.data.unlock_list=e.unlock_list;for(var t=0,i=e.unlock_desc;t<i.length;t++){var n=i[t];this.data.unlock_desc[n.id]=Utils.convertArray(n.list)}for(var r=0,o=e.show_sub;r<o.length;r++){var n=o[r];this.data.show_sub[n.id]=n.sub_id}this.data.unlock_list.sort(function(e,t){return e-t})}
+

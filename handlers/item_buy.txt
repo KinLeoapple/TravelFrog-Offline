@@ -1,0 +1,3 @@
+// ---- 实现 1/1 (长度 525) ----
+prototype.item_buy=function(e,t){if(null!=e.ticket&&(this.getModel(UserModel).addTicket(e.ticket),e.ticket>0&&this.dispatchEvent(new core.Event(ItemEventType.getTicket))),e.ads_id&&e.ads_id.length>0){var i=this.getModel(AdsModel).getAdsPlace(e.ads_id);i&&this.getModel(AdsModel).isValidAds(i)||(e.share_id=e.ads_id,e.ads_id="")}e.ads_id&&e.ads_id.length>0?this.dispatchEvent(new core.Event(ItemEventType.ads_id,e.ads_id)):e.share_id&&e.share_id.length>0&&this.dispatchEvent(new core.Event(ItemEventType.share_id,e.share_id))}
+
