@@ -4,6 +4,9 @@
 Node 自研服务器 + 官方客户端原件 + Electron 桌面壳,单机可玩、存档本地化。
 
 > 仅用于个人学习与停服存档备份。游戏内容与素材版权归 © 官方所有。
+>
+> 本项目参考了 [xiaochong3432/TravelFrog-offline](https://github.com/xiaochong3432/TravelFrog-offline):
+> 照片图层数据(社区预烘表演变而来的坐标/姿势映射)与离线化思路源自其社区考据与数据整理,特此致谢。
 
 ## 快速开始
 
@@ -52,12 +55,6 @@ node test_plans.js       # 周期计划 (伴蛙前行)
 node test_travel.js      # 旅行状态机
 node test_photo_assets.js# 照片资产完整性
 ```
-
-## 致谢
-
-本项目在照片图层数据(社区预烘表演变而来的坐标/姿势映射)与离线化思路方面参考了
-[xiaochong3432/TravelFrog-offline](https://github.com/xiaochong3432/TravelFrog-offline),
-感谢其社区考据与数据整理工作。
 
 ## GM 面板
 
