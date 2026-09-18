@@ -4,9 +4,11 @@
 Node 服务器 + 官方客户端原件 + Electron 桌面壳,单机可玩、存档本地化。
 
 > 仅用于个人学习与停服存档备份。游戏内容与素材版权归 © 官方所有。
->
-> 本项目参考了 [xiaochong3432/TravelFrog-offline](https://github.com/xiaochong3432/TravelFrog-offline):
-> 全部游戏协议、照片图层数据与离线化思路均参考其社区考据与数据整理工作,特此致谢。
+
+## 参考
+
+本项目参考了 [xiaochong3432/TravelFrog-offline](https://github.com/xiaochong3432/TravelFrog-offline) ,
+全部游戏协议、照片图层数据与离线化思路均源自其社区考据与数据整理工作,特此致谢。
 
 ## 快速开始
 
