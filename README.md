@@ -53,6 +53,12 @@ node test_travel.js      # 旅行状态机
 node test_photo_assets.js# 照片资产完整性
 ```
 
+## 致谢
+
+本项目在照片图层数据(社区预烘表演变而来的坐标/姿势映射)与离线化思路方面参考了
+[xiaochong3432/TravelFrog-offline](https://github.com/xiaochong3432/TravelFrog-offline),
+感谢其社区考据与数据整理工作。
+
 ## GM 面板
 
 服务器启动后访问 `http://127.0.0.1:8000/gm`(发放物品/三叶草、时间旅行等调试功能)。
