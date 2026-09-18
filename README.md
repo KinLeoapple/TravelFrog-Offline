@@ -15,8 +15,8 @@ Node 服务器 + 官方客户端原件 + Electron 桌面壳,单机可玩、存�
 ## 快速开始
 
 ```bash
-npm install        # 安装 Electron (二进制走 .npmrc 配置的国内镜像)
-npm start          # 启动桌面窗口 (内嵌游戏服务器, 关窗即优雅存档退出)
+npm install        # 安装 Electron
+npm start          # 启动桌面窗口
 ```
 
 或直接双击 `start.bat`。浏览器游玩:启动后访问 `http://127.0.0.1:8000/`(WebSocket 协议端口 8080)。
@@ -33,7 +33,7 @@ npm start          # 启动桌面窗口 (内嵌游戏服务器, 关窗即优雅�
 ## 目录结构
 
 ```
-desktop/    Electron 桌面壳 (main.js + 国服官方图标)
+desktop/    Electron 桌面壳 (main.js)
 server/     游戏服务器 (Node, 无框架): handlers.js 协议路由 + 各玩法模块
   data/user/  玩家存档 (运行时生成, 不入库)
   tests/      回归测试 (node tests/test_*.js)
