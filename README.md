@@ -54,10 +54,10 @@ protocol_table.json 协议模式表
 
 ```bash
 cd server/tests
-node test_tasks.js       # 成就任务 + 故事
-node test_plans.js       # 周期计划 (伴蛙前行)
-node test_travel.js      # 旅行状态机
-node test_photo_assets.js# 照片资产完整性
+node test_tasks.js        # 成就任务 + 故事
+node test_plans.js        # 周期计划 (伴蛙前行)
+node test_travel.js       # 旅行状态机
+node test_photo_assets.js # 照片资产完整性
 ```
 
 ## GM 面板
