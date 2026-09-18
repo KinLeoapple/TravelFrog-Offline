@@ -1,5 +1,10 @@
 @echo off
-rem 旅行青蛙·中国之旅 离线版 — Electron 桌面壳启动器
-rem 双击即玩: 自动拉起内嵌游戏服务器的桌面窗口; 关闭窗口 = 优雅存档退出
-cd /d %~dp0
-npm start --silent
+rem Travel Frog China offline edition - double-click launcher
+rem Auto-installs dependencies on first run, then starts the game window.
+cd /d "%~dp0"
+if not exist "node_modules\electron\dist\electron.exe" (
+  echo First run: installing dependencies, please wait a few minutes...
+  call npm install
+)
+start "" "node_modules\electron\dist\electron.exe" .
+exit /b 0
